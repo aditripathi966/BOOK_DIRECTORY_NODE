@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs")%>
+<%- include("partials/nav.ejs")%>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="jumbotron text-center bg-dark text-white">
+        <h1 class="display-4">Welcome to the Book Directory</h1>
+        <p class="lead">Discover a world of knowledge and adventure.</p>
+        <hr class="my-4">
+        <p>Sign up or sign in to explore our vast collection of books.</p>
+        <a class="btn btn-primary btn-lg mx-2" href="/signup">Sign Up</a>
+        <a class="btn btn-info btn-lg mx-2" href="/signin">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Books -->
+ 
+    <!-- Add more featured books here -->
+  </div>
+
+  <!-- Search Box -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for books...">
+        <button class="btn btn-secondary" type="button">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs")%>

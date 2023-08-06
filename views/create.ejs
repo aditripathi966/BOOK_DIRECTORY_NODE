@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="container bg-light p-2">
+  <form class="m-auto w-50 mt-5" action="/create/<%= id %>" method="post">
+    <h1 class="mb-4 text-center">CREATE NEW BOOK</h1>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author"
+        name="author"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="coverimage" class="form-label">Cover Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="coverimage"
+        name="coverimage"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="desc"
+        name="desc"
+        rows="4"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="datepublish" class="form-label">Publication Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="datepublish"
+        name="datepublish"
+      />
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary btn-lg">Create</button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

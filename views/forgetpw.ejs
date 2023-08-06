@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs")%>
+<%- include("partials/nav.ejs")%>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form class="p-4 bg-light rounded shadow-lg" action="/forgetpw" method="post">
+
+        <h1 class="text-center mb-4">Enter Existing Mail</h1>
+
+        <div class="mb-3">
+          <input required class="form-control" type="text" placeholder="example@johndoe.com" name="email">
+        </div>
+        <!-- Uncomment these lines if you want to add OTP functionality -->
+        <!-- <div class="mb-3">
+          <input required maxlength="4" class="form-control" type="text" placeholder="Enter OTP" name="otp">
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-success" type="button">Send OTP</button>
+        </div> -->
+
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" type="submit">Send Mail</button>
+        </div>
+        <p class="text-center mt-3"><a href="/signin">Sign In</a> | <a href="/signup">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs")%>

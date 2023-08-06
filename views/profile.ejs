@@ -1,0 +1,33 @@
+<%- include('partials/header')%>
+<%- include('partials/nav')%>
+
+<div class="container bg-light p-5">
+  <h1 class="mb-4">User Profile</h1>
+  <p>Create Your Book Directory</p>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="/create/<%= user._id %>" class="btn btn-primary btn-lg">
+        <i class="bi bi-pencil"></i> CREATE A NEW BOOK
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="/bookview/<%= user._id%>" class="btn btn-secondary btn-lg">
+        <i class="bi bi-eye"></i> VIEW YOUR ALL BOOKS
+      </a>
+    </div>
+  </div>
+
+  <h3 class="mt-4">List Of All Users</h3>
+  <div class="list-group w-50">
+    <% users.forEach((user) => { %>
+      <a href="#" class="list-group-item list-group-item-action">
+        <%= user.username %>
+      </a>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer')%>
+

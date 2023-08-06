@@ -1,0 +1,18 @@
+   <%- include("partials/header.ejs")%>
+   <%- include("partials/nav.ejs")%>
+   <form class="m-auto w-25 mt-5 " action="/update/<%= id %>/<%= index %>" method="post">
+
+      <h1 class="mb-4">Update page</h1>
+      <input class="form-control mb-3" type="text" value="<%=user.title%>" name="title"> 
+      <input class="form-control mb-3" type="text" value="<%=user.author%>" name="author"> 
+      <input class="form-control mb-3" type="text" value="<%=user.coverimage%>" name="coverimage"> 
+      <input class="form-control mb-3" type="text" value="<%=user.desc%>" name="desc"> 
+      <input class="form-control mb-3" type="date" value="<%=user.datepublish%>" name="datepublish"> 
+      <button class="btn btn-primary w-25">update<button>
+   </form><%- include('partials/header') %>
+
+   
+   <%- include('partials/footer') %>
+   
+    <%- include("partials/footer.ejs")%>
+  

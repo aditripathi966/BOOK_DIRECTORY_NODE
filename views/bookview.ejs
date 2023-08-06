@@ -1,0 +1,34 @@
+<%- include('partials/header')%>
+<%- include('partials/nav')%>
+
+<div class="container bg-light p-5 shadow-lg rounded">
+    <h1 class="mb-4">Book Directory</h1>
+    <p>Create Your Book Directory</p>
+    <hr />
+
+    <a href="/create/<%= id%>" class="btn btn-primary btn-lg">
+        <i class="bi bi-pencil"></i> CREATE A NEW BOOK
+    </a>
+
+    <h3 class="mt-4">List Of All BOOKS!!!!</h3>
+    <ul class="list-group">
+        <% arr.forEach((book, index) => { %>
+        <li class="list-group-item border-0 mb-3 d-flex justify-content-between shadow-sm p-3 rounded">
+            <div>
+                <h5>Title: <%= book.title %></h5>
+                <p>Author: <%= book.author %></p>
+                <p>Description: <%= book.desc %></p>
+                <p>Date: <%= book.datepublish %></p>
+            </div>
+            <div>
+                <img src="<%= book.coverimage %>" alt="Book Cover" class="img-thumbnail rounded">
+            </div>
+            <a class="text-decoration-none p-2" href="/delete/<%= id %>/<%= index %>">❌</a>
+            <br>
+            <a class="text-decoration-none p-2" href="/update/<%= id %>/<%= index %>">✏️</a>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- include('partials/footer')%>
