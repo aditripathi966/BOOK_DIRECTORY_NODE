@@ -2,21 +2,27 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: gilroy;
 }
 html,body{
     height: 100%;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1618365908648-e71bd5716cba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
+    background-image: url(https://img.freepik.com/free-vector/people-library-flat-vector-illustration_74855-6607.jpg?w=1060&t=st=1693251021~exp=1693251621~hmac=c9fc3a79f81650df3f27d2702156c7e56e97508eeae1def2901135b4d2be02f2);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 14px;
     font-family: gilroy;
 }
-
-
-a {
-  color: #00B7FF;
+nav a{
+  color: black;
+  font-size: 20px;
+}
+li{
+  color: black;
+}
+li:hover{
+     text-decoration: underline;
 }
 .photo{
       object-fit: cover;
@@ -24,4 +30,17 @@ a {
       width: 100%;
       background-size: cover;
 }
+h1 img{
+    height: 18vh;
+    width: 20vw;
+  margin-left: -15vh;
+}
+.hello{
+   color: black;
+}
+.color{
+      text-transform: uppercase;
+    color: white;
+}
+
 

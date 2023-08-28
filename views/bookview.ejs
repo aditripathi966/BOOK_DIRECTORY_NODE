@@ -1,34 +1,35 @@
-<%- include('partials/header')%>
-<%- include('partials/nav')%>
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
 
 <div class="container bg-light p-5 shadow-lg rounded">
-    <h1 class="mb-4">Book Directory</h1>
-    <p>Create Your Book Directory</p>
-    <hr />
+    <h1 class="display-4 mb-4">📚 Explore Your Book Oasis</h1>
+    <p class="lead">Dive into Your Personal Book Directory</p>
+    <hr class="my-4" />
 
-    <a href="/create/<%= id%>" class="btn btn-primary btn-lg">
-        <i class="bi bi-pencil"></i> CREATE A NEW BOOK
+    <a href="/create/<%= id %>" class="btn btn-primary btn-lg">
+        <i class="bi bi-pencil"></i> Add a New Book
     </a>
 
-    <h3 class="mt-4">List Of All BOOKS!!!!</h3>
-    <ul class="list-group">
+    <h3 class="mt-5 mb-3">Discover the Collection</h3>
+    <div class="row">
         <% arr.forEach((book, index) => { %>
-        <li class="list-group-item border-0 mb-3 d-flex justify-content-between shadow-sm p-3 rounded">
-            <div>
-                <h5>Title: <%= book.title %></h5>
-                <p>Author: <%= book.author %></p>
-                <p>Description: <%= book.desc %></p>
-                <p>Date: <%= book.datepublish %></p>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="<%= book.coverimage %>" alt="Book Cover" class="card-img-top rounded-top">
+                <div class="card-body">
+                    <h5 class="card-title"><%= book.title %></h5>
+                    <p class="card-text mb-2">By <%= book.author %></p>
+                    <p class="card-text"><%= book.desc %></p>
+                    <p class="card-text"><small class="text-muted">Published: <%= book.datepublish %></small></p>
+                    <div class="text-end">
+                        <a class="btn btn-danger btn-sm" href="/delete/<%= id %>/<%= index %>">Delete❌</a>
+                        <a class="btn btn-warning btn-sm" href="/update/<%= id %>/<%= index %>">Edit✏️</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="<%= book.coverimage %>" alt="Book Cover" class="img-thumbnail rounded">
-            </div>
-            <a class="text-decoration-none p-2" href="/delete/<%= id %>/<%= index %>">❌</a>
-            <br>
-            <a class="text-decoration-none p-2" href="/update/<%= id %>/<%= index %>">✏️</a>
-        </li>
+        </div>
         <% }) %>
-    </ul>
+    </div>
 </div>
 
-<%- include('partials/footer')%>
+<%- include('partials/footer') %>

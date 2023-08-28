@@ -1,0 +1,40 @@
+<%- include('partials/header')%>
+<!--  -->
+<%- include('partials/nav')%>
+<div class="container bg-light p-5">
+    <h1>User Profile</h1>
+    <p>Welcome to user profile</p>
+    <hr />
+    <a class="text-decoration-none" href="/create/<%= id%>"
+        >✏️CREATE A TASK BUDDY</a>
+    <br>
+    <br>
+    <h3>List Of All TASKS!!!!</h3>
+    <ul class="list-group w-25">
+        
+        <% arr.forEach((user,idx) => { %>
+        <li
+            class="list-group-item border-0 mb-3 d-flex justify-content-between"
+        >
+           Title: <%= user.title%>
+           <br>
+            Desc: <%= user.desc%>
+            <br>
+           Date: <%= user.date%>
+
+           <a class="text-decoration-none" href="/updatetask/<%= id%>/<%= idx%>"
+            >✏️</a>
+
+            <a class="text-decoration-none" href="/deletetask/<%= id%>/<%= idx%>"
+                >❌</a>
+
+                <a class="text-decoration-none" href="/deletetask/<%= id%>/<%= idx%>"
+                    ><input type="checkbox" ></a>
+            
+        
+        </li>
+        <%})%>
+    </ul>
+</div>
+
+<%- include('partials/footer')%>
